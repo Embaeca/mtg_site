@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #E8E9E9;
+}
+header{
+    padding: 0em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0c0f11d0;
+    color: aliceblue;
+    width: 100%;
+}
+.opcoes{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    padding: 1em;
+}
+.opcoes button, .proxima_carta button{
+    font-size: 12pt;
+    color: #E8E9E9;
+    background-color: transparent;
+    border: none;
+}
+.opcoes button:hover{
+    color: #D53103;
+}
+.proxima_carta button:hover{
+    background-color: #0c0f11d0;
+    color: #D53103;
+}
+section{
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6b4818e;
+    height: 100vh;
+    width: 97vw;
+}
+.carta{
+    padding-top: 2em;
+    max-width: 600px;
+    max-height: 700px;
+    min-height: 500px;
+    min-width: 300px;
+    width: 37vw;
+    height: 95vh;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0c0f11d0;
+    border-radius: 8px;
+    transform: 1s ease-in-out;
+}
+.carta .cartinha{
+    width: 34vw;
+    height: calc(32vw + 12vh);
+    max-width: 330px;
+    min-width: 200px;
+    max-height: 489px;
+    min-height: 280px;
+    animation: aumentar_e_diminuir 5s infinite ease-in-out;
+    transform: 1s ease-in-out;
+}
+.descricao_carta{
+    max-width: 400px;
+    max-height: 200px;
+    min-height: 100px;
+    min-width: 250px;
+    width: 35vw;
+    height: 28vh;
+    padding: 1em;
+    transform: 0.3s ease-in-out;
+
+}
+.nome_da_carta{
+    margin: 0;
+}
+.cartinha:hover{
+    transform: scale(1.01);
+}
+.proxima_carta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 4em;
+    background-color: #0c0f11d0;
+    gap: 1em;
+}
+@media (max-width:546px) {
+    header img{
+        margin: 0 0em;
+        padding: 0;
+    }
+    header{
+        flex-direction: row-reverse;
+        padding: 0px;
+    }
+    .principal{
+        margin: 0;
+        padding: 1em 00em 1em 0em;
+        display: flex;
+        flex-direction: column;
+    }
+    .principal button{
+        border: 1px solid #E8E9E9;
+    }
+    .principal button:hover{
+        border-style: dotted;
+        border-color: #D53103;
+        border-width: 1px;
+    }
+}
+@media (max-width: 990px) {
+    .descricao_da_carta{
+        height: 150px;
+        padding: 0 0.2em ;
+        white-space: pre-wrap;
+        overflow: auto;
+        text-overflow: ellipsis;
+        background-color: #00000057;
+        padding: 1em;
+        border-radius: 8px;
+        margin: 0;
+    }
+    .nome_da_carta{
+        margin-top: -1em;
+    }
+    .descricao_carta{
+        background-color: transparent;
+    }
+}
+@keyframes aumentar_e_diminuir {
+    0% {transform:scale(1.0);}
+    50% {transform:scale(1.1);}
+    100% {transform:scale(1.0);}
+}
