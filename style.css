@@ -67,7 +67,6 @@ section{
     min-width: 200px;
     max-height: 489px;
     min-height: 280px;
-    animation: aumentar_e_diminuir 5s infinite ease-in-out;
     transform: 1s ease-in-out;
 }
 .descricao_carta{
@@ -139,9 +138,4 @@ section{
     .descricao_carta{
         background-color: transparent;
     }
-}
-@keyframes aumentar_e_diminuir {
-    0% {transform:scale(1.0);}
-    50% {transform:scale(1.1);}
-    100% {transform:scale(1.0);}
 }
