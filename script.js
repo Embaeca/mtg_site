@@ -5,7 +5,7 @@ var anterior = document.querySelector(".anterior");
 var proximo = document.querySelector(".proxima");
 var secao = document.querySelector(".secao");
 var ligamagic = document.querySelector("#ligamagic")
-var mtg_ofc = document.querySelector("#mtg_site_ofc")
+var mtg_ofc = document.querySelector("#magic_site_ofc")
 
 var contador = 0;
 
